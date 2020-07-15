@@ -8,10 +8,9 @@ $red: #e30713;
 
 // IMPORT SECTION
 
-@import '../../node_modules/bootstrap/scss/bootstrap-reboot.scss'; // Bootstrap Reboot collection
-@import '../../node_modules/bootstrap/scss/mixins/_breakpoints.scss'; // Bootstrap Breakpoints mixin
-@import '../../node_modules/bootstrap/scss/bootstrap-grid.scss'; // Optional Bootstrap Grid
-// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+@import '../../node_modules/normalize-scss/sass/normalize/import-now'; // Normilize.css
+// @import '../../node_modules/bootstrap/scss/mixins/_breakpoints.scss'; // Bootstrap Breakpoints mixin
+@import '../../node_modules/bootstrap/scss/bootstrap-grid'; // Optional Bootstrap Grid
 
 // FONTS LOAD SECTION
 
@@ -23,4 +22,31 @@ body{
     font-family: $tinos;
 	font-size: $fontsize;
 	color: $textColor;
+}
+
+.button{
+    background-color: $red;
+    border-radius: 3px;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: none;
+    padding: 15px 17px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+@mixin link(){
+    color: $textColor;
+    border-bottom: 1px solid transparent; 
+    transition: all .3s ease-in;
+    text-decoration: none;
+    &:hover{
+        color: $textColor;
+        text-decoration: none;
+        border-color: $textColor;
+    }
 }
