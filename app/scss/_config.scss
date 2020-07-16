@@ -24,6 +24,12 @@ body{
 	color: $textColor;
 }
 
+h2{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+}
+
 .button{
     background-color: $red;
     border-radius: 3px;

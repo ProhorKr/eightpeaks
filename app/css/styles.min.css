@@ -3667,6 +3667,11 @@ body {
   font-size: 20px;
   color: #272727; }
 
+h2 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700; }
+
 .button {
   background-color: #e30713;
   border-radius: 3px;
@@ -3714,14 +3719,14 @@ body {
   text-align: right;
   padding-right: 15px; }
 
-.phone a, .email a {
+.header-contacts__link {
   color: #272727;
   border-bottom: 1px solid transparent;
   -webkit-transition: all .3s ease-in;
   -o-transition: all .3s ease-in;
   transition: all .3s ease-in;
   text-decoration: none; }
-  .phone a:hover, .email a:hover {
+  .header-contacts__link:hover {
     color: #272727;
     text-decoration: none;
     border-color: #272727; }
@@ -3745,30 +3750,30 @@ body {
     text-decoration: none;
     border-color: #272727; }
 
-.sct-1 {
+.banner {
   height: 85vh;
   background: url("../images/dest/bg-1.png") no-repeat;
-  width: 100vw;
+  width: 100%;
   background-size: cover; }
-  .sct-1 .container {
+  .banner .container {
     height: 100%; }
-    .sct-1 .container .row {
+    .banner .container .row {
       height: 100%; }
 
-.top-info__header {
+.banner-info__header {
   font-weight: 700;
   text-transform: uppercase;
   font-size: 40px;
   margin-bottom: 40px; }
 
-.top-info__text {
+.banner-info__text {
   font-size: 18px;
   color: #272727; }
 
-.top-info__button {
+.banner-info__button {
   margin-top: 45px; }
 
-.buttle {
+.banner-buttle {
   height: 70vh; }
-  .buttle__img {
+  .banner-buttle__img {
     width: 100%; }
