@@ -3883,24 +3883,16 @@ button, .button {
   line-height: 40px; }
 
 .parallax {
-  -webkit-perspective: 1px;
-          perspective: 1px;
-  height: 100%;
-  width: 100%;
-  overflow-x: hidden;
-  overflow-y: auto; }
-  .parallax__layer {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0; }
-    .parallax__layer--base {
-      -webkit-transform: translateZ(0);
-              transform: translateZ(0); }
-    .parallax__layer--back {
-      -webkit-transform: translateZ(-1px);
-              transform: translateZ(-1px); }
+  height: 1192px;
+  width: 360px;
+  overflow: hidden;
+  background-image: url("../images/dest/parralax-back.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed; }
+  .parallax__img {
+    height: 1192px; }
 
 .lifestyle__slider {
   width: 100%; }
