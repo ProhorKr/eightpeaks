@@ -88,10 +88,21 @@ function startwatch() {
 	watch([baseDir + '/**/*.js', '!' + paths.scripts.dest + '/*.min.js'], scripts);
 }
 
+function buildRes(){
+	return src([ // Выбираем нужные файлы
+		'app/css/**/*.min.css',
+		'app/js/**/*.min.js',
+		'app/images/dest/**/*',
+		'app/**/*.html',
+		], { base: 'app' }) // Параметр "base" сохраняет структуру проекта при копировании
+	.pipe(dest('res'))
+}
+
 exports.browsersync = browsersync;
 exports.assets      = series(cleanimg, styles, scripts, images);
 exports.styles      = styles;
 exports.scripts     = scripts;
 exports.images      = images;
 exports.cleanimg    = cleanimg;
+exports.build 	    = series(styles, scripts, images, buildRes);;
 exports.default     = parallel(images, styles, scripts, browsersync, startwatch);
