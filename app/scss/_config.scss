@@ -22,17 +22,19 @@ $gray: #e1e1e1;
 body{
     font-family: $tinos;
 	font-size: $fontsize;
-	color: $textColor;
+    color: $textColor;
 }
 
 h2{
     text-align: center;
     font-size: 40px;
     font-weight: 700;
+    letter-spacing: 1px;
 }
 
 h3{
     margin: 0;
+    letter-spacing: 1px;
 }
 
 p{

@@ -187,9 +187,16 @@
     margin-top: 140px;
     &__section-title{
         margin-top: 0;
+        margin-bottom: 32px;
     }
     &__section-header{
         margin-top: 0;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+    }
+    &__section-under-header{
+        letter-spacing: 1px;
     }
     &__content{
         display: none;
@@ -209,7 +216,7 @@
 .catalog-item-elem{
     margin-bottom: 90px;
     &__img{
-        margin-bottom: 60px;
+        margin-bottom: 34px;
     }
     &__img-desc{
         color: $textColorLight;        
@@ -532,6 +539,7 @@
         border: none;
         background-color: transparent;
         font-size: 16px;
+        width: 100%;
         &:focus{
             outline: none;
         }    
