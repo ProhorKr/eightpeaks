@@ -1,4 +1,5 @@
 @import "config";
+@import "carousel";
 
 // ----Header----
 .header{
@@ -44,6 +45,7 @@
     }
 }
 
+//---sct-1------
 .banner{
     height: 85vh;
     background: url('../images/dest/bg-1.png') no-repeat;
@@ -76,7 +78,501 @@
 
 .banner-buttle{
     height: 70vh;
+    margin-top: 50px;
     &__img{
         width: 100%;
     }
 }
+
+//--sct-2------
+.sct-2{
+    margin-bottom: 100px;
+    &__header{
+        margin-top: 95px;
+        margin-bottom: 100px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__video{
+        margin-right: auto;
+        margin-left: auto;
+        width: 1170px;
+        display: block;
+    }
+}
+.tabs{
+    margin-top: 20px;
+    margin-bottom: 35px;
+    &__list{
+        list-style: none;
+        padding: 0;
+    }
+    &__item{
+        margin-right: 50px;
+    }
+    &__link{
+        @include link;
+        color: $textColorLight;
+    }
+    &__content{
+        display: none;
+        &--show{
+            display: block;
+        }
+    }
+    &__text{
+        line-height: 48px;
+        font-size: 24px;
+        letter-spacing: 1.08;
+    }
+}
+
+//--sct-3------
+
+.text-block{
+    &__item{
+        margin-bottom: 120px;
+    }
+    &__header{
+        text-transform: uppercase;
+        &--right{
+            text-align: right;            
+        }
+    }
+    &__text{
+        text-align: justify;
+        font-size: 20px;
+        line-height: 40px;
+    }
+}
+
+.parallax {
+    perspective: 1px;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    &__layer{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        &--base{
+            transform: translateZ(0); 
+        }
+        &--back{
+            transform: translateZ(-1px);
+        }
+    }
+}
+
+//--sct-4------
+.lifestyle{
+    &__slider{
+        width: 100%;
+
+    }
+}
+.slider{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+//--sct-5------
+.catalog{
+    background: url('../images/dest/bg-3.png') no-repeat;
+    width: 100%;
+    margin-top: 140px;
+    &__section-title{
+        margin-top: 0;
+    }
+    &__section-header{
+        margin-top: 0;
+    }
+    &__content{
+        display: none;
+        &--show{
+            display: block;
+        }
+    }
+}
+
+.catalog-item{
+    text-align: center;
+    &__header{
+        margin-bottom: 50px;
+    }
+}
+
+.catalog-item-elem{
+    margin-bottom: 90px;
+    &__img{
+        margin-bottom: 60px;
+    }
+    &__img-desc{
+        color: $textColorLight;        
+    }
+}
+
+.catalog-carousel{
+    &__list{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 3px 4px 21px rgba(32, 32, 31, 0.11);
+    }
+    &__item{
+        display: block;
+        width: 100%;
+        height: 240px;
+        background-color: #fff;
+        transition: all 0.3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        &:hover,&--active{
+            box-shadow: 3px 4px 21px rgba(32, 32, 31, 0.11);
+            width: 110%;
+            z-index: 2;            
+        }
+    }
+}
+
+//--sct-6------
+.about-place{
+    margin-top: 100px;
+    &__item{
+        margin-bottom: 40px;
+        position: relative;
+    }
+    &__img{
+        height: 500px;
+    }
+    &__img-text-block{
+        position: absolute;
+        color: white;
+        top:50px;
+        left: 50px;
+        opacity: 0.8;
+    }
+    &__image-cont{
+        position: relative;
+    }
+    &__img-header{
+       font-size: 40px;
+       margin-top: 10px;
+       margin-bottom: 5px;
+    }
+    &__img-text-under-header{
+        font-size: 14px;
+    }
+    &__text{
+        font-size: 14px;
+        color: $textColor;
+        line-height: 28px;
+        text-align: justify;
+    }
+    &__header{
+        font-size: 24px;
+        text-transform: uppercase;
+        font-weight: 700;
+        position: absolute;
+        bottom: 0;
+    }
+    &__line{
+        width: 84%;
+        height: 1px;
+        background-color: $gray;
+        display: block;        
+        margin-bottom: 25px;
+        position: relative;
+        margin-top: 25px;
+        &--first{
+            margin-top: 10px;
+        }
+        &--l{
+            margin-left: 88px;
+            &::before{
+                content: '\201C';
+                font-size: 72px;
+                color: $gray;
+                position: absolute;
+                left: -90px;
+                top: -26px;
+                font-weight: bold;
+            } 
+        }
+        &--r{
+            margin-left: 0;
+            margin-right: 88px;
+            &::before{
+                content: '\201C';
+                font-size: 72px;
+                color: $gray;
+                position: absolute;
+                right: -90px;
+                top: -29px;
+                font-weight: bold;
+            } 
+        }               
+    }
+}
+
+//--sct-8------
+.partners{
+    &__row{
+        margin-bottom: 90px;
+    }
+    &__logo{
+        filter: grayscale(.9);
+        &:hover{
+            filter: grayscale(0);
+        }
+    }
+}
+
+//--sct-9------
+.reward{
+    &__row{
+        height: 300px;
+    }
+    &__col-text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__col-text-wrapper{
+        text-align: right;
+        &--text-left{
+            text-align: left;
+        }
+    }
+    &__text{
+        @extend .text;
+        text-align: right;
+    }
+    &__header{
+        margin-bottom: 18px;
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+    &__wrapper{
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    &__pointer{
+        width: 17px;
+        height: 17px;
+        border-radius: 50%;
+        border: 2px solid $gray;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__vertical-line{
+        height: 100%;
+        width: 2px;
+        background-color: $gray;
+        position: absolute;
+        &--r{
+            left: 79px;
+        }
+        &--l{
+            right: 78px;
+        }
+        &--start,&--end{
+            height: 14px;
+            position: static;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    &__img{
+        width: 195px;
+        height: 195px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50px;
+        z-index: 2;
+        &--r{
+            left: -15px;
+        }
+        &--l{
+            right: -20px;
+        }
+    }
+    &__horizontal-line{
+        height: 2px;
+        width: 310px;
+        background-color: $gray;
+        position: absolute;
+        top: 147px;
+        &--right{            
+            left: 175px;
+        }
+        &--left{
+            right: 175px;
+        }
+    }
+    &__icon{
+        position: absolute;
+        top:65px;
+        width: 165px;
+        height: 165px;
+        &--diplom-r{            
+            background: url('../images/dest/reward_diplom.png') no-repeat center center;
+            left: 240px;            
+        }
+        &--diplom-l{            
+            background: url('../images/dest/reward_diplom.png') no-repeat center center;
+            right: 235px;            
+        }
+        &--medal-r{
+            background: url('../images/dest/reward_medal.png') no-repeat center center;
+            left:465px;
+        }        
+    }
+    &__icon-line{
+        &--r{
+            &::before{
+                content: ' ';
+                height: 2px;
+                background-color: $gray;
+                position: absolute;
+                width: 60px;
+                top: 83px;
+                left: -60px;
+            }
+        }
+        &--l{
+            &::before{
+                content: ' ';
+                height: 2px;
+                background-color: $gray;
+                position: absolute;
+                width: 60px;
+                top: 83px;
+                right: -58px;
+            }
+        }
+    }
+}
+
+//--sct-10------
+.contacts{
+    margin-top: 80px;
+    background: url('../images/dest/bg-8.png') no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    &__contacts-block{
+        margin-bottom: 60px;
+    }
+    &__header-left{
+        text-align: left;
+        margin-bottom: 17px;
+    }
+    &__under-header{
+        color: $textColorLight;
+        margin-bottom: 60px;
+    }
+    &__phone{
+        font-weight: 700;
+        font-size: 24px;
+        margin-bottom: 10px;
+        display: block;
+    }
+    &__email{
+        font-weight: 700;
+        font-size: 24px;
+        margin-bottom: 10px;
+        display: block;
+    }
+    &__stock{
+        font-weight: 700;
+        font-size: 24px;
+        margin-bottom: 5px;
+        display: block;
+    }
+    &__text{
+        font-size: 20px;
+        margin-top: 0;
+        color: $textColorLight;
+        text-decoration: none;
+    }
+}
+.social-icons{
+    display: flex;
+    margin-bottom: 50px;
+    &__link{
+        width: 67px;
+        height: 67px;
+        margin-right: 30px;
+    }
+}
+
+.contact-form{
+    margin-top: 78px;
+    margin-bottom: 55px;
+    &__input-wrapper{
+        height: 40px;
+        border-bottom: 1px solid #E0E0E0;
+        margin-bottom: 60px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    &__input{
+        border: none;
+        background-color: transparent;
+        font-size: 16px;
+        &:focus{
+            outline: none;
+        }    
+    }
+    &__button{
+        margin-left: auto;
+        margin-right: auto;
+        font-family: $tinos;
+    }
+}
+
+//--footer-------
+
+.footer{
+    &__row{
+        height: 150px;
+    }
+    &__menu-item{
+        margin-right: 20px;
+    }
+}
+.footer-menu{
+    &__list{
+        margin-bottom: 5px;
+    }
+}
+.footer-contacts{
+    &__link{
+        @include link;
+    }
+    &__email{
+        margin-right: 20px;
+    }
+    &__text{
+        margin: 0;
+    }
+    &__copyrigth{
+        margin-bottom: 20px;
+    }
+    &__copyrigth-2{
+        margin-bottom: 20px;
+    }
+}
+
