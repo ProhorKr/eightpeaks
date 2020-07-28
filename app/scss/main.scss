@@ -157,11 +157,13 @@
     }
     &__blob{
         background-image: url('../images/dest/blob.svg');
+        background-repeat: no-repeat;
         width: 163px;
         height: 263px;
         display: flex;
         align-items: flex-end;
         justify-content: center;
+        overflow: hidden;
     }
     &__fill{
         width: 162px;
@@ -173,6 +175,7 @@
         animation-iteration-count: infinite;
         animation-timing-function: linear;
         animation-duration: 1s;
+        background-clip: content-box;
         &--23{
             background-position-y: 100px;
         }
@@ -438,6 +441,7 @@
     }
     &__col-text-wrapper{
         text-align: right;
+        padding-right: 20px;
         &--text-left{
             text-align: left;
         }
