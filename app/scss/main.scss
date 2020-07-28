@@ -1,5 +1,6 @@
 @import "config";
 @import "carousel";
+@import "animation";
 
 // ----Header----
 .header{
@@ -125,6 +126,94 @@
         line-height: 48px;
         font-size: 24px;
         letter-spacing: 1.08;
+    }
+}
+
+.drops{
+    position: relative;
+    height: 625px;
+    &__item{
+        width: 162px;
+        position: absolute;
+        &--hlorid{
+            top: 315px;
+            left: 25px;
+        }
+        &--kalciy{
+            top:140px;
+            left: 190px;
+        }
+        &--magniy{            
+            left: 375px;
+        }
+        &--sulfati{ 
+            top: 315px;           
+            left: 355px;
+        }
+        &--natr{
+            top:200px;
+            left: 550px;
+        }
+    }
+    &__blob{
+        background-image: url('../images/dest/blob.svg');
+        width: 163px;
+        height: 263px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    &__fill{
+        width: 162px;
+        height: 262px;
+        background-image: url('../images/dest/wave-2.svg');
+        background-position-x: 145px;
+        background-repeat: repeat-x;
+        animation-name: waveAction;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-duration: 1s;
+        &--23{
+            background-position-y: 100px;
+        }
+        &--13{
+            background-position-y: 185px;
+        }
+        &--15{
+            background-position-y: 210px;
+        }
+    }
+    &__header{
+        color: $textColorLight;
+        margin-top: 15px;
+        display: block;
+        text-align: center;
+        font-size: 18px;
+        letter-spacing: 0.1em;
+    }
+    &__text{
+        display: block;
+        text-align: center;
+        margin-bottom: 50px;
+        color: $textColorLight;
+        letter-spacing: 0.1em;
+    }
+}
+.unique-text{
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &__text{
+        font-size: 36px;
+        letter-spacing: 0.1em;
+        color: $textColorLight;
+        line-height: 1.2em;
+        letter-spacing: 0.03em;
+    }
+    &__text-bottom{
+        color: $textColorLight;
+        font-size: 19px;
     }
 }
 
@@ -404,7 +493,7 @@
             left: -15px;
         }
         &--l{
-            right: -20px;
+            right: -18px;
         }
     }
     &__horizontal-line{

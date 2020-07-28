@@ -3730,6 +3730,18 @@ button, .button {
   visibility: hidden;
   cursor: pointer; }
 
+@-webkit-keyframes waveAction {
+  0% {
+    background-position-x: 145px; }
+  100% {
+    background-position-x: 253px; } }
+
+@keyframes waveAction {
+  0% {
+    background-position-x: 145px; }
+  100% {
+    background-position-x: 253px; } }
+
 .header {
   padding-top: 20px; }
 
@@ -3868,6 +3880,95 @@ button, .button {
     line-height: 48px;
     font-size: 24px;
     letter-spacing: 1.08; }
+
+.drops {
+  position: relative;
+  height: 625px; }
+  .drops__item {
+    width: 162px;
+    position: absolute; }
+    .drops__item--hlorid {
+      top: 315px;
+      left: 25px; }
+    .drops__item--kalciy {
+      top: 140px;
+      left: 190px; }
+    .drops__item--magniy {
+      left: 375px; }
+    .drops__item--sulfati {
+      top: 315px;
+      left: 355px; }
+    .drops__item--natr {
+      top: 200px;
+      left: 550px; }
+  .drops__blob {
+    background-image: url("../images/dest/blob.svg");
+    width: 163px;
+    height: 263px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .drops__fill {
+    width: 162px;
+    height: 262px;
+    background-image: url("../images/dest/wave-2.svg");
+    background-position-x: 145px;
+    background-repeat: repeat-x;
+    -webkit-animation-name: waveAction;
+            animation-name: waveAction;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s; }
+    .drops__fill--23 {
+      background-position-y: 100px; }
+    .drops__fill--13 {
+      background-position-y: 185px; }
+    .drops__fill--15 {
+      background-position-y: 210px; }
+  .drops__header {
+    color: #8e8d8d;
+    margin-top: 15px;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 0.1em; }
+  .drops__text {
+    display: block;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #8e8d8d;
+    letter-spacing: 0.1em; }
+
+.unique-text {
+  text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .unique-text__text {
+    font-size: 36px;
+    letter-spacing: 0.1em;
+    color: #8e8d8d;
+    line-height: 1.2em;
+    letter-spacing: 0.03em; }
+  .unique-text__text-bottom {
+    color: #8e8d8d;
+    font-size: 19px; }
 
 .text-block__item {
   margin-bottom: 120px; }
@@ -4112,7 +4213,7 @@ button, .button {
   .reward__img--r {
     left: -15px; }
   .reward__img--l {
-    right: -20px; }
+    right: -18px; }
 
 .reward__horizontal-line {
   height: 2px;
