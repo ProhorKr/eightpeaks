@@ -3831,10 +3831,10 @@ button, .button {
   margin-top: 45px; }
 
 .banner-buttle {
-  height: 70vh;
+  height: 75vh;
   margin-top: 50px; }
   .banner-buttle__img {
-    width: 100%; }
+    height: 100%; }
 
 .sct-2 {
   margin-bottom: 100px; }
@@ -3849,37 +3849,6 @@ button, .button {
     margin-left: auto;
     width: 1170px;
     display: block; }
-
-.tabs {
-  margin-top: 20px;
-  margin-bottom: 35px; }
-  .tabs__list {
-    list-style: none;
-    padding: 0; }
-  .tabs__item {
-    margin-right: 50px; }
-  .tabs__link {
-    color: #272727;
-    border-bottom: 1px solid transparent;
-    -webkit-transition: all .3s ease-in;
-    -o-transition: all .3s ease-in;
-    transition: all .3s ease-in;
-    text-decoration: none;
-    color: #8e8d8d; }
-    .tabs__link:hover, .tabs__link--acitve {
-      color: #272727;
-      text-decoration: none;
-      border-color: #272727; }
-    .tabs__link--active {
-      font-weight: 700; }
-  .tabs__content {
-    display: none; }
-    .tabs__content--show {
-      display: block; }
-  .tabs__text {
-    line-height: 48px;
-    font-size: 24px;
-    letter-spacing: 1.08; }
 
 .drops {
   position: relative;
@@ -3986,17 +3955,32 @@ button, .button {
   font-size: 20px;
   line-height: 40px; }
 
+.paralax-buttle {
+  margin-top: 100px; }
+
 .parallax {
   height: 1192px;
   width: 360px;
   overflow: hidden;
-  background-image: url("../images/dest/parralax-back.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  position: absolute; }
   .parallax__img {
     height: 1192px; }
+
+.video-bg {
+  position: relative;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  height: 1192px; }
+  .video-bg video {
+    position: absolute;
+    left: -65px; }
+  .video-bg video:nth-of-type(2) {
+    top: 660px; }
 
 .lifestyle__slider {
   width: 100%; }
