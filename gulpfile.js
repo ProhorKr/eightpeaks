@@ -55,7 +55,7 @@ function browsersync() {
 function scripts() {
 	return src(paths.scripts.src)
 	.pipe(concat(paths.jsOutputName))
-	// .pipe(uglify())
+	.pipe(uglify())
 	.pipe(dest(paths.scripts.dest))
 	.pipe(browserSync.stream())
 }
@@ -65,7 +65,7 @@ function styles() {
 	.pipe(scss())
 	.pipe(concat(paths.cssOutputName))
 	.pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
-	// .pipe(cleancss( {level: { 1: { specialComments: 0 } },/* format: 'beautify' */ }))
+	.pipe(cleancss( {level: { 1: { specialComments: 0 } },/* format: 'beautify' */ }))
 	.pipe(dest(paths.styles.dest))
 	.pipe(browserSync.stream())
 }
@@ -79,6 +79,10 @@ function images() {
 
 function cleanimg() {
 	return del('' + paths.images.dest + '/**/*', { force: true })
+}
+
+function cleanbuild() {
+	return del('res', { force: true })
 }
 
 function startwatch() {
@@ -104,5 +108,6 @@ exports.styles      = styles;
 exports.scripts     = scripts;
 exports.images      = images;
 exports.cleanimg    = cleanimg;
-exports.build 	    = series(styles, scripts, images, buildRes);;
+exports.cleanbuild  = cleanbuild;
+exports.build 	    = series(cleanbuild, styles, scripts, images, buildRes);;
 exports.default     = parallel(images, styles, scripts, browsersync, startwatch);
