@@ -17,7 +17,7 @@
                     <nav>
                         <ul class="menu__list d-flex justify-content-between">
                             <li class="menu__item"><a class="menu__link" href="#">О воде</a></li>
-                            <li class="menu__item"><a class="menu__link" href="#">Стиль жизни</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Вкус жизни</a></li>
                             <li class="menu__item"><a class="menu__link" href="#">Каталог</a></li>
                             <li class="menu__item"><a class="menu__link" href="#">Где купить</a></li>
                             <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
@@ -28,12 +28,13 @@
                     <div class="header-contacts__contacts d-flex flex-column">
                         <span class="header-contacts__phone"><a class="header-contacts__link" href="tel:+78004441908">8 800 444 1908</a></span>
                         <span class="header-contacts__email"><a class="header-contacts__link" href="mailto:info@eightpeaks.ru">info@eightpeaks.ru</a></span>
-                        <a class="button header-contacts__button mt-auto open-modal" data-modal="#modalHeader" href="#">Купить на ozon.ru</a>
+                        <a class="button header-contacts__button mt-auto open-modal" data-toggle="modal" data-target="#ozonModal" href="#">Купить на ozon.ru</a>
                     </div>
                     <div class="header-contacts__lang lang">
                         <ul class="lang__list">
                             <li class="lang__item"><a class="lang__link" href="/en/">EN</a></li>
                             <li class="lang__item"><a class="lang__link" href="/cn/">中文</a></li>
+                            <li class="lang__item"><a class="lang__link" href="/ar/">AR</a></li>
                         </ul>
                     </div>
                 </div>
@@ -66,20 +67,23 @@
         </div>
     </section>
     <section class="sct-3 paralax-buttle">
+        <div class="section-title">
+            <h2 class="section-title__header">EIGHT PEAKS - это</h2>
+        </div>
         <div class="container">
             <div class="row">
                 <div class="col-md-4 paralax-buttle__text-blocks text-blocks">
                     <div class="text-block__item">
-                        <h3 class="text-block__header text-block__header--left">Характер</h3>
-                        <p class="text-block__text">Найти лучшую воду, бережно сохранить ее свойства и предложить каждому покупателю, бережно сохранить ее свойства и предложить каждому покупателю</p>                        
+                        <h3 class="text-block__header text-block__header--left">Сила поколений</h3>
+                        <p class="text-block__text">Вид снежных вершин завораживает. Первозданная мощь гор неиссякаема. Лишь вода, способна вобрать в себя накопленный веками потенциал и нести энергию гор вниз по крутым склонам на землю. Восемь горных систем России - Большой Кавказ, Урал, Алтай, Верхоянский хребет, Саяны, хребет Черского, Сихотэ-Алинь, восемь уникальных мест хранят силу людей, живших в их пределах. И хотя века разделяют нас, мы, как и они, видим уходящие в небо снежные вершины, ощущаем себя частью бесконечности, впитываем энергию гор и чувствуем характер воды, несущей ее.</p>                        
                     </div>
                     <div class="text-block__item">
-                        <h3 class="text-block__header text-block__header--left">Уникальность</h3>
-                        <p class="text-block__text">Найти лучшую воду, бережно сохранить ее свойства и предложить каждому покупателю, бережно сохранить ее свойства и предложить каждому покупателю</p>                        
+                        <h3 class="text-block__header text-block__header--left">Идеальный баланс</h3>
+                        <p class="text-block__text">Крутые склоны, высокие пики, изумрудные долины, ароматные хвойные леса и озёра-зеркала. Горы - это край, который ценят сильные духом, это древняя колыбель уникальной воды, что рождается из ледников и медленно спускается вниз, наполняясь неиссякаемой мощью и силой Земли. Проходя свой тайный путь по внутренним лабиринтам гор, вода насыщается микроэлементами, собирает оттенки своего уникального вкуса, впитывает энергию стихий.</p>                        
                     </div>
                     <div class="text-block__item">
-                        <h3 class="text-block__header text-block__header--left">Первозданность</h3>
-                        <p class="text-block__text">Найти лучшую воду, бережно сохранить ее свойства и предложить каждому покупателю, бережно сохранить ее свойства и предложить каждому покупателю</p>                        
+                        <h3 class="text-block__header text-block__header--left">Первозданная чистота</h3>
+                        <p class="text-block__text">Вода «Eight Peaks» добывается в горах, что обеспечивает ее изумительный вкус и первозданную чистоту. Проходя через естественный фильтр из множества горных пород, вода очищается и обогащается минеральными веществами. Безупречная чистота скважины, отсутствие контакта с грунтовыми водами, позволяет пить воду, не подвергая ее производственной очистке.</p>                        
                     </div>
                 </div>
                 <div class="col-md-4 paralax-buttle__buttle d-flex justify-content-center">
@@ -95,16 +99,16 @@
                 </div>
                 <div class="col-md-4 paralax-buttle__text-blocks text-blocks">
                     <div class="text-block__item">
-                        <h3 class="text-block__header text-block__header--right">Кавказ</h3>
-                        <p class="text-block__text">Найти лучшую воду, бережно сохранить ее свойства и предложить каждому покупателю, бережно сохранить ее свойства и предложить каждому покупателю</p>                        
+                        <h3 class="text-block__header text-block__header--right">Качество</h3>
+                        <p class="text-block__text">Мы бережно сохраняем свойства природной воды «Eight Peaks». Источник воды и производство соответствуют всем современным требованиям, позволяющим осуществлять контроль качества на всех этапах технологического процесса. Бутилируем воду рядом с источником, сводя к минимуму ее взаимодействие с окружающей средой. Постоянно делаем замеры и исследования, следим за тем, чтобы вода, которая оказывается в бутылках, была идеальна во всем. Чистейшая, полезная и невероятно вкусная. Без отдушек и консервантов.</p>                        
                     </div>
                     <div class="text-block__item">
-                        <h3 class="text-block__header text-block__header--right">Вкус жизни</h3>
-                        <p class="text-block__text">Найти лучшую воду, бережно сохранить ее свойства и предложить каждому покупателю, бережно сохранить ее свойства и предложить каждому покупателю</p>                        
+                        <h3 class="text-block__header text-block__header--right">Премиальность</h3>
+                        <p class="text-block__text">Визуальный образ бренда разработало международное маркетинговое агентство. Получилось стильно, лаконично, со вкусом. Упаковка воды продумана до мелочей. Плавные линии упаковки, напоминающие изгибы волн для этетического наслаждения, продуманная форма для удобства употребления, утолщенные стенки для бережной транспортировки и хранения.</p>                        
                     </div>
                     <div class="text-block__item">
-                        <h3 class="text-block__header text-block__header--right">Чистота от природы</h3>
-                        <p class="text-block__text">Найти лучшую воду, бережно сохранить ее свойства и предложить каждому покупателю, бережно сохранить ее свойства и предложить каждому покупателю</p>                        
+                        <h3 class="text-block__header text-block__header--right">Стиль жизни</h3>
+                        <p class="text-block__text">Вода «Eight Peaks» уже получила признание на российском и международном уровнях. Для наших клиентов и партнеров Eight Peaks – это стиль жизни. Успешные переговоры, заключенные контракты, полезный фитнесс, покоренные вершины, семейный ужин, отдых на природе с друзьями.</p>                        
                     </div>
                 </div>
             </div>
@@ -168,9 +172,17 @@
                         </div>                                
                     </div>
                     <div class="col-md-4 unique-text">
-                        <span class="unique-text__text">Вид снежных вершин завораживает. Первозданная мощь гор неиссякаема. Лишь вода, способна вобрать в себя накопленный веками потенциал и нести</span>
-                        <span class="unique-text__text-bottom">Общая минерализация: 0,1 - 0,4 г/л<br>
-                            Водородный показатель(pH): не более 7,7</span>
+                        <span class="unique-text__text">Над совершенством веками работает сама природа!</span>
+                        <span class="unique-text__text-bottom">
+                            <ul class="unique-text__list">
+                                <li class="unique-text__list-item">Оптимальная минерализация 0,1-0,4 г/л – можно пить каждый день</li>
+                                <li class="unique-text__list-item">Идеальный баланс микроэлементов</li>
+                                <li class="unique-text__list-item">Кальций в карбонатной (естественной) форме легко усваивается</li>
+                                <li class="unique-text__list-item">Кальций и магний придают воде приятный сладковатый вкус</li>
+                                <li class="unique-text__list-item">Наличие природного йода в рекомендованных количествах – главное отличие</li>
+                                <li class="unique-text__list-item">pH воды 7,4 (слабощелочная) как у новорожденного. В такой среде гибнут все микробы и раковые клетки</li>
+                            </ul>
+                        </span>
                     </div>
                 </div>                
             </div>
@@ -178,22 +190,30 @@
     </section>
     <section class="sct-4 lifestyle">
         <div class="section-title">
-            <h2 class="section-title__header">СТИЛЬ ЖИЗНИ</h2>
-            <span class="section-title__under-header">Наша вода в жизни</span>
+            <h2 class="section-title__header">ВКУС ЖИЗНИ</h2>
+            <!-- <span class="section-title__under-header">Наша вода в жизни</span> -->
         </div>
         <div class="lifestyle__slider slider">
             <div id="carousel">
-                <a href="#"><img src="images/dest/sl_03.jpg" id="item-1"></a>
-                <a href="#"><img src="images/dest/sl_02.jpg" id="item-2"></a>
-                <a href="#"><img src="images/dest/sl_01.jpg" id="item-3"></a>
-                <a href="#"><img src="images/dest/sl_04.jpg" id="item-4"></a>
-                <a href="#"><img src="images/dest/sl_05.jpg" id="item-5"></a>               
-                <a href="#"><img src="images/dest/sl_11.jpg" id="item-5"></a>               
-                <a href="#"><img src="images/dest/sl_12.jpg" id="item-5"></a>               
-                <a href="#"><img src="images/dest/sl_13.jpg" id="item-5"></a>               
-                <a href="#"><img src="images/dest/sl_14.jpg" id="item-5"></a>               
-                <a href="#"><img src="images/dest/sl_15.jpg" id="item-5"></a>               
-                <a href="#"><img src="images/dest/sl_16.jpg" id="item-5"></a>               
+                <a href="#"><img src="images/dest/01.jpg" id="item-1"></a>
+                <a href="#"><img src="images/dest/02.jpg" id="item-2"></a>
+                <a href="#"><img src="images/dest/03.jpg" id="item-3"></a>
+                <a href="#"><img src="images/dest/04.jpg" id="item-4"></a>
+                <a href="#"><img src="images/dest/04_1.jpg" id="item-5"></a>               
+                <a href="#"><img src="images/dest/05.jpg" id="item-5"></a>               
+                <a href="#"><img src="images/dest/06.jpg" id="item-5"></a>               
+                <a href="#"><img src="images/dest/07.jpg" id="item-5"></a>               
+                <a href="#"><img src="images/dest/08.jpg" id="item-5"></a>               
+                <a href="#"><img src="images/dest/09.jpg" id="item-5"></a>               
+                <a href="#"><img src="images/dest/10.jpg" id="item-5"></a>               
+                <a href="#"><img src="images/dest/11.jpg" id="item-5"></a>               
+                <a href="#"><img src="images/dest/11_1.jpg" id="item-5"></a>               
+                <a href="#"><img src="images/dest/12.jpg" id="item-5"></a>               
+                <a href="#"><img src="images/dest/13.jpg" id="item-5"></a>               
+                <a href="#"><img src="images/dest/14.jpg" id="item-5"></a>               
+                <a href="#"><img src="images/dest/15.jpg" id="item-5"></a>               
+                <a href="#"><img src="images/dest/16.jpg" id="item-5"></a>               
+                <a href="#"><img src="images/dest/18.jpg" id="item-5"></a>               
               </div>
         </div>
     </section>
@@ -216,7 +236,7 @@
                                 Гидрокарбонатная магниевая кальциевая.</span>
                         </div>
                         <div class="catalog-item">
-                            <h3 class="catalog-item__header">Негазированная серия. Стекло</h3>
+                            <h3 class="catalog-item__header">Стекло. Негазированная серия. </h3>
                             <div class="row">
                                 <div class="col-md-5">
                                     <div class="catalog-item-elem">
@@ -252,7 +272,7 @@
                                 Гидрокарбонатная магниевая кальциевая.</span>
                         </div>
                         <div class="catalog-item">
-                            <h3 class="catalog-item__header">Газированная серия. Стекло</h3>
+                            <h3 class="catalog-item__header">Стекло. Газированная серия.</h3>
                             <div class="row">
                                 <div class="col-md-5">
                                     <div class="catalog-item-elem">
@@ -288,7 +308,7 @@
                                 Гидрокарбонатная магниевая кальциевая.</span>
                         </div>
                         <div class="catalog-item">
-                            <h3 class="catalog-item__header">Негазированная серия. Пластик</h3>
+                            <h3 class="catalog-item__header">ПЭТ. Негазированная серия.</h3>
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="catalog-item-elem">
@@ -336,7 +356,7 @@
                                 Гидрокарбонатная магниевая кальциевая.</span>
                         </div>
                         <div class="catalog-item">
-                            <h3 class="catalog-item__header">Газированная серия. Пластик</h3>
+                            <h3 class="catalog-item__header">ПЭТ. Газированная серия.</h3>
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="catalog-item-elem">
@@ -394,24 +414,24 @@
                 </div>
                 <div class="col">
                     <span class="about-place__line about-place__line--l about-place__line--first"></span>
-                    <p class="about-place__text">Победив вероломного бога молний Эпле, могущественный Тейри разогнал грозовые тучи и приказал Солнцу растопить ледяной панцирь, лежащий на вершине горы. Жаркие солнечные лучи быстро разогрели лед, хлынули с отвесных стен светлые струи водопадов, ринулись в долину и быстро усмирили огонь, бушевавший у подножия горы...<br>
+                    <p class="about-place__text about-place__text--italic">Победив вероломного бога молний Эпле, могущественный Тейри разогнал грозовые тучи и приказал Солнцу растопить ледяной панцирь, лежащий на вершине горы. Жаркие солнечные лучи быстро разогрели лед, хлынули с отвесных стен светлые струи водопадов, ринулись в долину и быстро усмирили огонь, бушевавший у подножия горы...<br>
                         С тех пор и поныне эти водопады шумят над Софийской долиной,
                         давая начало звонкой речке Софии и питая жизнь деревьев и трав, растущих на
                         её каменистых берегах.</p>
                     <span class="about-place__line about-place__line--r"></span>
                     <p class="about-place__text">Бесконечное гостеприимство, горячая любовь, соперничество, слезы - искрометные страсти издавна кипели в этих местах. Сами Боги пировали в заоблачных высях Кавказа и сражались за первенство здесь!</p>
                     <p class="about-place__text">Река София несет свои воды к главной водной артерии Архыза - реке Большой Зеленчук, в долине которой мы добываем минеральную воду </p>
-                    <span class="about-place__header">Восемь вершин. Кавказ</span>
+                    <!-- <span class="about-place__header">Восемь вершин. Кавказ</span> -->
                 </div>
             </div>
             <div class="row about-place__item">
                 <div class="col">                    
                     <span class="about-place__line about-place__line--l about-place__line--first"></span>
-                    <p class="about-place__text">Один охотник смертельно ранил в горах марала. Истекая кровью, добежал раненый марал до источника Аржан-Су и с разбега бросился в воду. Пока охотник спускался с горы, у зверя затянулась рана. Марал выскочил из воды и помчался прочь быстрее ветра. Очень удивился этому охотник и бросил в воду сушеного хариуса. Рыба ожила и поплыла, шевеля плавниками. Кинул охотник в воду шкуру выдры. Вынырнула выдра и поплыла так же, как хариус. Понял тогда охотник, что источник Аржан-Су силу и жизнь всем дает.</p>
+                    <p class="about-place__text about-place__text--italic">Один охотник смертельно ранил в горах марала. Истекая кровью, добежал раненый марал до источника Аржан-Су и с разбега бросился в воду. Пока охотник спускался с горы, у зверя затянулась рана. Марал выскочил из воды и помчался прочь быстрее ветра. Очень удивился этому охотник и бросил в воду сушеного хариуса. Рыба ожила и поплыла, шевеля плавниками. Кинул охотник в воду шкуру выдры. Вынырнула выдра и поплыла так же, как хариус. Понял тогда охотник, что источник Аржан-Су силу и жизнь всем дает.</p>
                     <span class="about-place__line about-place__line--r"></span>                    
                     <p class="about-place__text">Алтай - земля сильных и выносливых. Край скотоводов, пасущих свои стада на горных пастбищах. Земля охотников, выслеживающих хитрого зверя на тайных тропах. Люди здесь издавна живут в единстве с природой, питаются и лечатся целебной водой с гор.</p>
                     <p class="about-place__text">В этом районе, вблизи реки Катунь, мы добываем минеральную воду</p>
-                    <span class="about-place__header">Восемь вершин. Алтай</span>
+                    <!-- <span class="about-place__header">Восемь вершин. Алтай</span> -->
                 </div>
                 <div class="col about-place__image-cont">
                     <img src="images/dest/bg-altai.png" alt="" class="about-place__img">
@@ -433,12 +453,12 @@
                 </div>
                 <div class="col">                    
                     <span class="about-place__line about-place__line--l about-place__line--first"></span>
-                    <p class="about-place__text">Долго шел раненый воин Абахай и упал у ручья. Зачерпнул он воды и как только испил ее, вернулась к нему былая сила. Привел он к целебному ручью других богатырей и воздвигли они храм на том месте.</p>
+                    <p class="about-place__text about-place__text--italic">Долго шел раненый воин Абахай и упал у ручья. Зачерпнул он воды и как только испил ее, вернулась к нему былая сила. Привел он к целебному ручью других богатырей и воздвигли они храм на том месте.</p>
                     <span class="about-place__line about-place__line--r"></span>                    
                     <p class="about-place__text">Таинственные склоны горного хребта Сихотэ-Алинь хранят руины мегалитической цивилизации. Местные жители собирают корень целебного женьшеня в горных долинах, амурский тигр царствует в густых лесах. Быстрые потоки бегут с восточных отвесных скал в Восточное море, медленные реки плавно несут свои воды с пологих западных склонов в Амур. В заповедном краю на Дальнем Востоке уцелели первозданная чистота, необузданная дикая сила и энергетика древних цивилизаций.</p>
                     <p class="about-place__text">И по сей день исполинские шестигранные колонны вокруг Водопада Неожиданный напоминают о силе древних воинов и охраняют целебную воду.</p>
                     <p class="about-place__text">Недалеко от этих мест, вблизи реки Шкотовка, мы добываем минеральную воду</p>
-                    <span class="about-place__header">Восемь вершин. Сихотэ-Алинь</span>
+                    <!-- <span class="about-place__header">Восемь вершин. Сихотэ-Алинь</span> -->
                 </div>
             </div>
         </div>
@@ -447,14 +467,14 @@
         <div class="container">
             <div class="section-title">
                 <h2 class="section-title__header">О КОМПАНИИ</h2>
-                <span class="section-title__under-header">Мы предлагаем нашим покупателям лучшую воду России</span>
+                <!-- <span class="section-title__under-header">Мы предлагаем нашим покупателям лучшую воду России</span> -->
             </div>
             <div class="row">
                 <div class="col-md-7">
-                    <p class="text--dark">Название “Восемь вершин” на первый взгляд не связано с водой, но выбрано не случайно.</p>
+                    <p class="text--dark text--bold">Название “Восемь вершин” на первый взгляд не связано с водой, но выбрано не случайно.</p>
                     <p class="text">Среди горных систем в России можно выделить восемь: Большой Кавказ, Уральские горы, Алтай, Верхоянский хребет, Западный и Восточный Саяны, хребет Черского, Сихотэ-Алинь. А там, где горы, там и ледники - неиссякаемый запас чистейшей воды, сделанный самой природой. Именно там можно найти самую лучшую минеральную питьевую воду. Эти края не только не тронуты индустриализацией, но даже и ногой человека!</p>
                     <p class="text">Наши гидрогеологи тщательно изучают водоносные слои долин, исследуют полученные образцы воды. Команда экспертов выбирает лучшие источники - воду с уникальными вкусом и балансом минеральных веществ.</p>
-                    <p class="text--dark">Однако мало добыть уникальную воду. Важно сохранить ее свойства!</p>
+                    <p class="text--dark text--bold">Однако мало добыть уникальную воду. Важно сохранить ее свойства!</p>
                     <p class="text">Мы бутилируем воду рядом с источником, сводя к минимуму ее взаимодействие с окружающей средой. Прозрачная бутылка с более плотными стенками сохраняет ее свойства, и чистота воды поражает покупателя с первого взгляда.</p>
                 </div>
                 <div class="col-md-4 ml-auto d-flex align-items-center">
@@ -470,18 +490,18 @@
                 <span class="section-title__under-header">Здесь вы можете купить нашу продукцию</span>
             </div>
             <div class="row partners__row">
-                <div class="col"><img src="images/dest/logo_ozon.png" alt="" class="partners__logo"></div>
-                <div class="col"><img src="images/dest/logo_waterbaikal.png" alt="" class="partners__logo"></div>
-                <div class="col"><img src="images/dest/logo_vodovoz.png" alt="" class="partners__logo"></div>
-                <div class="col"><img src="images/dest/logo_beru.png" alt="" class="partners__logo"></div>
-                <div class="col"><img src="images/dest/logo_mosprivoz.png" alt="" class="partners__logo"></div>
+                <div class="col"><a href="https://www.ozon.ru/seller/36977/" class="partners__link" target="_blank"><img src="images/dest/logo_ozon.png" alt="" class="partners__logo"></a></div>
+                <div class="col"><a href="https://www.waterbaikal.ru/eight-peaks/" class="partners__link" target="_blank"><img src="images/dest/logo_waterbaikal.png" alt="" class="partners__logo"></a></div>
+                <div class="col"><a href="https://vodovoz.ru/catalog/voda_vosem_vershin/" class="partners__link" target="_blank"><img src="images/dest/logo_vodovoz.png" alt="" class="partners__logo"></a></div>
+                <div class="col"><a href="https://beru.ru/search?supplierId=614463" class="partners__link" target="_blank"><img src="images/dest/logo_beru.png" alt="" class="partners__logo"></a></div>
+                <div class="col"><a href="https://mosprivoz.ru/catalog/mineralnaya_voda/voda_vosem_vershin/ " class="partners__link" target="_blank"><img src="images/dest/logo_mosprivoz.png" alt="" class="partners__logo"></a></div>
             </div>
-            <div class="row partners__row">
-                <div class="col"><img src="images/dest/logo_tabris.png" alt="" class="partners__logo"></div>
-                <div class="col"><img src="images/dest/logo_wildberries.png" alt="" class="partners__logo"></div>
-                <div class="col"><img src="images/dest/logo_metro.png" alt="" class="partners__logo"></div>
-                <div class="col"><img src="images/dest/logo_azbukavkusa.png" alt="" class="partners__logo"></div>
-                <div class="col"><img src="images/dest/logo_komus.png" alt="" class="partners__logo"></div>
+            <div class="row partners__row d-flex justify-content-md-around">
+                <div class="col-md-3"><a href="https://www.tabris.ru/" class="partners__link" target="_blank"><img src="images/dest/logo_tabris.png" alt="" class="partners__logo"></a></div>
+                <div class="col-md-3"><a href="https://www.wildberries.ru/brands/eight-peaks" class="partners__link" target="_blank"><img src="images/dest/logo_wildberries.png" alt="" class="partners__logo"></a></div>
+                <!-- <div class="col">a.partners__link<img src="images/dest/logo_metro.png" alt="" class="partners__logo"></div>
+                <div class="col">a.partners__link<img src="images/dest/logo_azbukavkusa.png" alt="" class="partners__logo"></div>
+                <div class="col">a.partners__link<img src="images/dest/logo_komus.png" alt="" class="partners__logo"></div> -->
             </div>
         </div>
     </section>
@@ -510,8 +530,8 @@
                         <div class="reward__vertical-line reward__vertical-line--r"></div>
                         <img src="images/dest/reward_01.png" alt="" class="reward__img reward__img--r">
                         <!-- <div class="reward__horizontal-line reward__horizontal-line--right"></div> -->
-                        <div class="reward__icon reward__icon--diplom-r reward__icon-line--r"></div>
-                        <div class="reward__icon reward__icon--medal-r reward__icon-line--r"></div>
+                        <div class="reward__icon reward__icon--diplom-r reward__icon-line--r" data-modal-img="images/dest/diplom-prod.jpg"></div>
+                        <div class="reward__icon reward__icon--medal-r reward__icon-line--r" data-modal-img="images/dest/medal-prod.jpg"></div>
                     </div>
                 </div>
             </div>
@@ -520,7 +540,7 @@
                     <div class="reward__wrapper reward__wrapper">
                         <div class="reward__vertical-line reward__vertical-line--l"></div>
                         <img src="images/dest/reward_02.png" alt="" class="reward__img reward__img--l">
-                        <div class="reward__icon reward__icon--diplom-l  reward__icon-line--l"></div>
+                        <div class="reward__icon reward__icon--diplom-l  reward__icon-line--l" data-modal-img="images/dest/diplom-agro.jpg"></div>
                     </div>
                 </div>
                 <div class="col-md-5  reward__col-text">
@@ -634,16 +654,47 @@
             </div>
         </div>
     </footer>
+    <div class="modal fade" id="ozonModal" tabindex="-1" role="dialog" aria-labelledby="ozonModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal__dialog" role="document">
+          <div class="modal-content modal__content">
+            <div class="modal-header modal-header--noborder">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal__logo">
+                    <img src="images/dest/logo_ozon.png" alt="">
+                </div>
+                <h2 class="modal__title">Интернет-магазин OZON</h2>
+                <span class="modal__text">Низкие цены <br>на миллионы товаров!</span><br><br>
+                <span class="modal__text">Москва: + 7 (495) 009-70-70</span><br>
+                <span class="modal__text">Санкт-Петербург: +7 (812) 500-45-45</span><br>
+                <span class="modal__text">Регионы: 8 (800) 234-70-00 (звонок бесплатный)</span><br>
+            </div>
+            <div class="modal-footer">
+                <a href="https://www.ozon.ru/seller/36977/" target="_blank" class="button modal__link-out">Перейти</a>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="modal fade" id="rewardModal" tabindex="-1" role="dialog" aria-labelledby="RewardModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal__dialog" role="document">
+          <div class="modal-content modal__content">
+            <div class="modal-header modal-header--noborder">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body ">
+                    <img src="images/dest/logo_ozon.png" alt="" class="modal__img">
+            </div>
+            <div class="modal-footer">
+            </div>
+          </div>
+        </div>
+    </div>
 
-    <div class='modal' id='modalHeader'>
-        <div class='content'>
-            <h1 class='title'>This is a modal</h1>
-            <p>
-                    Here is some text and stuff. cool cool  
-            </p>
-            <a class='btn close-modal' data-modal="#modalHeader" href="#">K Bye</a>
-        </div>  
-    </div> 
 
     <script src="js/script.min.js"></script>
 </body>

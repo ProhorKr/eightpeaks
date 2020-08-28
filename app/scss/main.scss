@@ -5,8 +5,9 @@
 // ----Header----
 .header{
     padding-top: 20px;
+    padding-bottom: 20px;
     position: sticky;
-    top: 0px;
+    top: -1px;
     background-color: white;
     z-index: 100;
 }
@@ -180,45 +181,69 @@
         letter-spacing: 0.1em;
     }
 }
+
+.uniques{
+
+    .section-title{
+        margin-top: 55px;
+    }
+}
 .unique-text{
-    text-align: right;
+    text-align: left;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
+
     &__text{
-        font-size: 36px;
+        font-size: 24px;
         letter-spacing: 0.1em;
-        color: $textColorLight;
+        color: $textColor;
         line-height: 1.2em;
         letter-spacing: 0.03em;
+        margin-bottom: 35px;
     }
+
     &__text-bottom{
         color: $textColorLight;
-        font-size: 19px;
+        font-size: 20px;
+        line-height: 1.2em;
     }
+
+    &__list-item{
+        margin-bottom: 38px;
+        font-size: 16px;
+    }
+
 }
 
 //--sct-3------
 
 .text-block{
     &__item{
-        margin-bottom: 120px;
+        margin-bottom: 100px;
+        height: 325px;
     }
     &__header{
         text-transform: uppercase;
+        margin-bottom: 15px;
+
         &--right{
             text-align: right;            
         }
     }
     &__text{
         text-align: justify;
-        font-size: 20px;
-        line-height: 40px;
+        font-size: 16px;
+        line-height: 26px;
     }
 }
 
 .paralax-buttle{
     margin-top: 100px;
+
+    .section-title{
+        margin-top: 50px;
+    }
 }
 
 .parallax {
@@ -267,6 +292,8 @@
     background: url('../images/dest/bg-3.png') no-repeat;
     width: 100%;
     margin-top: 140px;
+    background-size: cover;
+
     &__section-title{
         margin-top: 0;
         margin-bottom: 32px;
@@ -296,11 +323,17 @@
 }
 
 .catalog-item-elem{
-    margin-bottom: 90px;
+    margin-bottom: 45px;
+    display: flex;
+    flex-direction: column;
+    height: 290px;
+
     &__img{
         margin-bottom: 34px;
         max-width: 100%;
+        max-height: 80%;
     }
+
     &__img-desc{
         color: $textColorLight;        
     }
@@ -319,7 +352,7 @@
     &__item{
         display: block;
         width: 100%;
-        height: 240px;
+        height: 220px;
         background-color: #fff;
         transition: all 0.3s;
         display: flex;
@@ -349,7 +382,7 @@
         color: white;
         top:50px;
         left: 50px;
-        opacity: 0.8;
+        // opacity: 0.8;
     }
     &__image-cont{
         position: relative;
@@ -367,6 +400,10 @@
         color: $textColor;
         line-height: 28px;
         text-align: justify;
+
+        &--italic{
+            font-style: italic;
+        }
     }
     &__header{
         font-size: 24px;
@@ -516,6 +553,11 @@
         top:65px;
         width: 165px;
         height: 165px;
+
+        &:hover{
+            cursor: pointer;
+        }
+
         &--diplom-r{            
             background: url('../images/dest/reward_diplom.png') no-repeat center center;
             left: 240px;            
@@ -567,7 +609,7 @@
     }
     &__header-left{
         text-align: left;
-        margin-bottom: 17px;
+        // margin-bottom: 17px;
     }
     &__under-header{
         color: $textColorLight;
@@ -575,24 +617,24 @@
     }
     &__phone{
         font-weight: 700;
-        font-size: 24px;
+        font-size: 16px;
         margin-bottom: 10px;
         display: block;
     }
     &__email{
         font-weight: 700;
-        font-size: 24px;
+        font-size: 16px;
         margin-bottom: 10px;
         display: block;
     }
     &__stock{
         font-weight: 700;
-        font-size: 24px;
+        font-size: 16px;
         margin-bottom: 5px;
         display: block;
     }
     &__text{
-        font-size: 20px;
+        font-size: 16px;
         margin-top: 0;
         color: $textColorLight;
         text-decoration: none;
@@ -611,14 +653,16 @@
 .contact-form{
     margin-top: 78px;
     margin-bottom: 55px;
+
     &__input-wrapper{
         height: 40px;
         border-bottom: 1px solid #E0E0E0;
-        margin-bottom: 60px;
+        margin-bottom: 80px;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
     }
+    
     &__input{
         border: none;
         background-color: transparent;
@@ -670,65 +714,66 @@
 
 // --Modal------
 
-.overlay {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    // padding: 40px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.75);
-    opacity: 0;
-    pointer-events: none;
-    transition: 0.35s ease-in-out;
-    max-height: 100vh;
-    overflow-y: auto;
+    .modal{;
+        
+        font-size: 16px;
 
-    &.open{
-        opacity: 1;
-        pointer-events: inherit;
-    }
-
-    .modal{
-        background: white;
-        text-align: center;
-        padding: 40px 80px;
-        box-shadow: 0px 1px 10px rgba(255, 255, 255, 0.35);
-        opacity: 0;
-        pointer-events: none;
-        transition: 0.35s ease-in-out;
-        max-height: 100vh;
-        overflow-y: auto;
-
-        &.open{
-            opacity: 1;
-            pointer-events: inherit;
-
-            .content{
-                transform: translate(0, 0px);
-                opacity: 1;
-            }
+        &__content{
+            border: 0;
+            box-shadow: 0px 1px 10px rgba(255, 255, 255, 0.35);
         }
 
-        .content{
-            transform: translate(0, -10px);
-			opacity: 0;
-			transition: .35s ease-in-out;
+        &__logo{
+            margin-bottom: 30px;
         }
 
-        .title{
+        &__title{
+            font-size: 20px;
+            color: $textColor;
             margin-top: 0;
+            font-weight: bold;
+        }
+
+        &__text{
+            color: $textColorLight;
+            line-height: 20px;
+        }
+
+        &__link-out{
+            width: 225px;
+        }
+
+        &__img{
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+  
+
+  .no-scroll{
+      overflow: hidden;
+  }
+
+  .modal{   //bootstrap modal
+
+    &-header{
+
+        &--noborder{
+            border-bottom: 0;
         }
     }
 
-    .footer{
-        width: 100%;
-        background-color: #fff;
-        position: absolute;
-        bottom: 0;
+    &-footer{
+        border-top: 0;
+        justify-content: center;
+    }
+
+    &-body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 16px;
     }
   }
