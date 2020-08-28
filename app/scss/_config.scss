@@ -79,6 +79,18 @@ button, .button{
     }
 }
 
+@mixin media-tablet{
+    @media (max-width: 992px){
+        @content;
+    }
+}
+
+@mixin media-mobile{
+    @media (max-width: 576px){
+        @content;
+    }
+}
+
 .section-title{
     margin-bottom: 45px;
     margin-top: 135px;
