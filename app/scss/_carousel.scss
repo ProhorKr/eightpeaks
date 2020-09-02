@@ -5,8 +5,13 @@
     clear:both;
     overflow:hidden;
     background:#FFF;
+
+    @include media-mobile{
+      height: 150px;
+    }
   }
   #carousel img {
     visibility:hidden; 
     cursor:pointer; 
+    max-width: 60%;
   }

@@ -13,9 +13,45 @@ $gray: #e1e1e1;
 // @import '../../node_modules/bootstrap/scss/mixins/_breakpoints.scss'; // Bootstrap Breakpoints mixin
 @import '../../node_modules/bootstrap/scss/bootstrap'; // Optional Bootstrap Grid
 
-// FONTS LOAD SECTION
+// FONTS LOAD SECTION 
 
 @import url('https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap');
+
+// MIXINS
+
+@mixin link(){
+    color: $textColor;
+    border-bottom: 1px solid transparent; 
+    transition: all .3s ease-in;
+    text-decoration: none;
+    &:hover, &--acitve{
+        color: $textColor;
+        text-decoration: none;
+        border-color: $textColor;        
+    }
+    &--active{
+        font-weight: 700;
+    }
+}
+
+@mixin media-tablet{
+    @media (max-width: 768px){
+        @content;
+    }
+}
+
+@mixin media-mobile{
+    @media (max-width: 576px){
+        @content;
+    }
+}
+
+@mixin media-desktop{
+    @media (min-width: 992px){
+        @content;
+    }
+}
+
 
 // GENERAL DOCUMENT STYLES
 
@@ -35,6 +71,10 @@ h2{
     font-size: 30px;
     font-weight: 700;
     letter-spacing: 1px;
+
+    @include media-mobile{
+        font-size: 20px;
+    }
 }
 
 h3{
@@ -62,33 +102,6 @@ button, .button{
     font-size: 18px;
     text-decoration: none;
     outline: none;
-}
-
-@mixin link(){
-    color: $textColor;
-    border-bottom: 1px solid transparent; 
-    transition: all .3s ease-in;
-    text-decoration: none;
-    &:hover, &--acitve{
-        color: $textColor;
-        text-decoration: none;
-        border-color: $textColor;        
-    }
-    &--active{
-        font-weight: 700;
-    }
-}
-
-@mixin media-tablet{
-    @media (max-width: 992px){
-        @content;
-    }
-}
-
-@mixin media-mobile{
-    @media (max-width: 576px){
-        @content;
-    }
 }
 
 .section-title{
