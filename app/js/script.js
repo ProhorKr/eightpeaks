@@ -73,7 +73,7 @@ window.onload = function(){
         });
     });
 
-    if(window.innerWidth <= 576){
+    if(window.innerWidth <= 992){
         document.getElementById('video__mobile-wrapper').innerHTML = '\
         <video class="sct-2__video-mobile col-12" autoplay loop muted preload="auto">\
             <source src="images/dest/cikle6.mp4" type="video/mp4">\
@@ -81,7 +81,7 @@ window.onload = function(){
         </video>'
     }
 
-    if(window.innerWidth >= 576){
+    if(window.innerWidth >= 992){
         document.getElementById('video__desktop-bg').innerHTML = '\
             <video class="sct-2__video" autoplay loop muted preload="auto">\
                 <source src="images/dest/cikle5.mp4" type="video/mp4">\
@@ -92,11 +92,15 @@ window.onload = function(){
     $('#btn_submit').on("click", function(){
         // собираем данные с формы
         var user_name    = $('input[name="name"]').val();
-        var user_phone   = $('input[name="tel"]').val();
+        var user_phone   = $('input[name="phone"]').val();
         var text_comment = $('input[name="comments"]').val();
-        
-        // отправляем данные
-        $.ajax({
+
+        if (user_name.length < 3 && user_phone.length < 6){
+            $("#result").html("Введите корректное имя и номер телефона");
+        }
+        else{
+            // отправляем данные
+            $.ajax({
                 url: "send.php", // куда отправляем
                 type: "post", // метод передачи
                 data: { // что отправляем
@@ -116,7 +120,10 @@ window.onload = function(){
                         $("#result").html("Ваше сообщение отправлено. Мы ответим вам в ближайшее время.");                     
                         
                 }  
-        });			
+            });
+        }
+        
+        			
 });
 
 };

@@ -179,9 +179,14 @@
 
 .banner-info{
 
+    @include media-tablet{
+        text-align: center;
+    }
+
     @include media-mobile{
         text-align: center;
     }
+    
     &__header{
         font-weight: 700;
         text-transform: uppercase;
@@ -191,6 +196,8 @@
         @include media-tablet{
             font-size: 24px;
             margin-bottom: 20px;
+            margin-top: 60px;
+            text-align: center;
         }
 
         @include media-mobile{
@@ -206,10 +213,17 @@
     }
     &__button-block{
 
+        @include media-tablet{
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         @include media-mobile{
             margin-left: auto;
             margin-right: auto;
         }
+
+        
     }
     &__button{
         margin-top: 45px;
@@ -227,17 +241,24 @@
     display: flex;
     align-items: center;
 
+    @include media-tablet{
+        height: 540px;
+        justify-content: center;
+    }
+
     @include media-mobile{
         height: 200px;
         justify-content: center;
     }
+
+    
 
     &__img{
         max-height: 100%;
 
         @include media-tablet{
             position: absolute;
-            left: -65%;
+            // left: -65%;
         }
 
         @include media-mobile{
@@ -264,9 +285,15 @@
     }
 
     &__video-mobile{
+        
 
         max-height: 180px;
         margin-bottom: 45px;
+
+        @include media-tablet{
+            max-height: initial;
+            width: 100%;
+        }
         
         @include media-desktop{
             display: none;
@@ -277,7 +304,11 @@
 .video{
 
     &__mobile-wrapper{
+        @include media-desktop{
+            display: none;
+        }
 
+        width: 100%;
     }
 }
 
@@ -285,12 +316,24 @@
     position: relative;
     height: 625px;
 
+    @include media-tablet{
+        height: 450px;
+        margin-bottom: 20px;
+    }
+
     @include media-mobile{
         height: 300px;
     }
     &__item{
         width: 162px;
         position: absolute;
+
+        @include media-tablet{
+            width: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
         @include media-mobile{
             width: 70px;
@@ -302,6 +345,11 @@
             top: 315px;
             left: 25px;
 
+            @include media-tablet{
+                top: 210px;
+                left: 30px;
+            }
+
             @include media-mobile{
                 top: 135px;
                 left: 35px;
@@ -311,6 +359,11 @@
             top:140px;
             left: 190px;
 
+            @include media-tablet{
+                top: 90px;
+                left: 145px;
+            }
+
             @include media-mobile{
                 top: 45px;
                 left: 105px;
@@ -318,6 +371,10 @@
         }
         &--magniy{            
             left: 375px;
+
+            @include media-tablet{
+                left: 265px;
+            }
 
             @include media-mobile{
                 left: 185px;
@@ -327,6 +384,11 @@
             top: 315px;           
             left: 355px;
 
+            @include media-tablet{
+                top: 235px;
+                left: 275px;
+            }
+
             @include media-mobile{
                 top: 135px;
                 left: 175px;
@@ -335,6 +397,11 @@
         &--natr{
             top:200px;
             left: 550px;
+
+            @include media-tablet{
+                top: 120px;
+                left: 388px;
+            };
 
             @include media-mobile{
                 top: 55px;
@@ -351,6 +418,12 @@
         align-items: flex-end;
         justify-content: center;
         overflow: hidden;
+
+        @include media-tablet{
+            background-image: url('../images/dest/blob-mobile.svg');
+            width: 120px;    
+            height: 190px;
+        }
 
         @include media-mobile{
             background-image: url('../images/dest/blob-mobile.svg');
@@ -370,6 +443,12 @@
         animation-duration: 1s;
         background-clip: content-box;
 
+        @include media-tablet{
+            background-image: url('../images/dest/wave-mobile.svg');
+            width: 117px;    
+            height: 190px;
+        }
+
         @include media-mobile{
             background-image: url('../images/dest/wave-mobile.svg');
             width: 70px;    
@@ -379,6 +458,10 @@
         &--23{
             background-position-y: 100px;
 
+            @include media-tablet{
+                background-position-y: 70px;
+            }
+
             @include media-mobile{
                 background-position-y: 40px;
             }
@@ -386,12 +469,20 @@
         &--13{
             background-position-y: 185px;
 
+            @include media-tablet{
+                background-position-y: 120px;
+            }
+
             @include media-mobile{
                 background-position-y: 70px;
             }
         }
         &--15{
             background-position-y: 210px;
+
+            @include media-tablet{
+                background-position-y: 150px;
+            }
 
             @include media-mobile{
                 background-position-y: 90px;
@@ -406,6 +497,12 @@
         font-size: 18px;
         letter-spacing: 0.1em;
 
+        @include media-tablet{
+            font-size: 14px;
+            color: $textColor;
+            margin-top: 2px;
+        }
+
         @include media-mobile{
             font-size: 12px;
             color: $textColor;
@@ -418,6 +515,11 @@
         margin-bottom: 50px;
         color: $textColorLight;
         letter-spacing: 0.1em;
+
+        @include media-tablet{
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
 
         @include media-mobile{
             font-size: 12px;
@@ -450,6 +552,12 @@
         letter-spacing: 0.03em;
         margin-bottom: 35px;
 
+        @include media-tablet{
+            font-size: 20px;
+            margin-bottom: 5px;
+            text-align: justify;
+        }
+
         @include media-mobile{
             font-size: 14px;
             margin-bottom: 5px;
@@ -457,6 +565,10 @@
     }
 
     &__list{
+
+        @include media-tablet{
+            padding-left: 18px;
+        }
         
         @include media-mobile{
             padding-left: 18px;
@@ -472,6 +584,10 @@
     &__list-item{
         margin-bottom: 38px;
         font-size: 16px;
+
+        @include media-tablet{
+            margin-bottom: 10px;
+        }
 
         @include media-mobile{
             font-size: 12px;
@@ -489,6 +605,15 @@
         margin-bottom: 100px;
         height: 325px;
 
+        @include media-desktop{
+            min-height: 450px;
+        }
+
+        @include media-tablet{
+            height: auto;
+            margin-bottom: 45px;
+        }
+
         @include media-mobile{
             height: auto;
             margin-bottom: 45px;
@@ -498,6 +623,11 @@
         text-transform: uppercase;
         margin-bottom: 15px;
 
+        @include media-tablet{
+            text-align: center;
+            font-size: 12px;
+        }
+
         @include media-mobile{
             text-align: center;
             font-size: 12px;
@@ -505,6 +635,10 @@
 
         &--right{
             text-align: right;
+
+            @include media-tablet{
+                text-align: center;
+            }
             
             @include media-mobile{
                 text-align: center;
@@ -533,6 +667,10 @@
     &__buttle{
         display: flex;
         justify-content: center;
+
+        @include media-tablet{
+            display: none;
+        }
 
         @include media-mobile{
             display: none;
@@ -579,6 +717,11 @@
 .lifestyle{
 
     .section-title{
+
+        @include media-tablet{
+            margin-top: 80px;
+            margin-bottom: 30px;
+        }
         @include media-mobile{
             margin-top: 40px;
             margin-bottom: 30px;
@@ -627,6 +770,9 @@
         }
 
         .section-title{
+            @include media-tablet{
+                display: none;
+            }
             @include media-mobile{
                 display: none;
             }
@@ -635,6 +781,20 @@
 
     &__mobile-header{
         display: none;
+
+        @include media-tablet{
+            display: block;
+
+            .section-title__under-header{
+                font-size: 14px;
+                line-height: normal;
+            }
+
+            .section-title{
+                font-size: 14px;
+                line-height: normal;
+            }
+        }
 
         @include media-mobile{
             display: block;
@@ -684,6 +844,10 @@
             }
         }
 
+        @include media-tablet{
+            display: block;
+        }
+
         @include media-mobile{
             display: block;
         }
@@ -706,6 +870,13 @@
     display: flex;
     flex-direction: column;
     height: 290px;
+
+    @include media-tablet{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
     @include media-mobile{
         height: auto;
@@ -740,6 +911,10 @@
 }
 
 .catalog-carousel{
+
+    @include media-tablet{
+        display: none;
+    }
 
     @include media-mobile{
         display: none;
@@ -777,6 +952,10 @@
 .about-place{
     margin-top: 100px;
 
+    @include media-tablet{
+        margin-top: 80px;
+    }
+
     @include media-mobile{
         margin-top: 40px;
     }
@@ -784,6 +963,14 @@
     &__item{
         margin-bottom: 40px;
         position: relative;
+
+        @include media-tablet{
+            display: none;
+
+            &--show{
+                display: block;
+            }
+        }
 
         @include media-mobile{
             display: none;
@@ -936,6 +1123,10 @@
     &__mobile-tab{
         display: none;
 
+        @include media-tablet{
+            display: block;
+        }
+
         @include media-mobile{
             display: block;
         }
@@ -963,6 +1154,12 @@
 
 .about-company{
 
+    @include media-tablet{
+        &__logo{
+            justify-content: center;
+        }
+    }
+
     @include media-mobile{
         .section-title{
             margin-top: 60px;
@@ -972,6 +1169,8 @@
             display: none;
         }
     }
+
+    
     
 }
 
@@ -1021,6 +1220,10 @@
 
 //--sct-9------
 .reward{
+
+    @include media-tablet{
+        display: none;
+    }
 
     @include media-mobile{
         display: none;
@@ -1175,6 +1378,10 @@
 
     display: none;
 
+    @include media-tablet{
+        display: block;
+    }
+
     @include media-mobile{
 
         display: block;
@@ -1284,6 +1491,10 @@
     background-size: cover;
     width: 100%;
 
+    @include media-tablet{
+        text-align: center;
+    }
+
     @include media-mobile{
         text-align: center;
     }
@@ -1297,6 +1508,10 @@
     &__header-left{
         text-align: left;
         // margin-bottom: 17px;
+
+        @include media-tablet{
+            text-align: center;
+        }
 
         @include media-mobile{
             text-align: center;
@@ -1340,6 +1555,10 @@
 .social-icons{
     display: flex;
     margin-bottom: 50px;
+
+    @include media-tablet{
+        justify-content: center;
+    }
 
     @include media-mobile{
         justify-content: center;
@@ -1414,6 +1633,10 @@
 
 .footer{
 
+    @include media-tablet{
+        margin-top: 80px;
+    }
+
     @include media-mobile{
         margin-top: 80px;
     }
@@ -1422,6 +1645,10 @@
     }
     &__menu-item{
         margin-right: 20px;
+
+        @include media-tablet{
+            margin-bottom: 0;
+        }
 
         @include media-mobile{
             margin-bottom: 0;
@@ -1458,6 +1685,12 @@
             }
         }
 
+        @include media-tablet{
+            display: block;
+            order: 3;
+            margin-top: 15px;
+        }
+
         @include media-mobile{
             display: block;
             order: 3;
@@ -1467,6 +1700,11 @@
 }
 .footer-menu{
 
+    @include media-tablet{
+        display: flex;
+        justify-content: center;
+    }
+
     @include media-mobile{
         display: flex;
         justify-content: center;
@@ -1475,6 +1713,11 @@
         margin-bottom: 5px;
         display: flex;
         justify-content: space-between;
+
+        @include media-tablet{            
+            justify-content: center;
+            flex-direction: row;
+        }
 
         @include media-mobile{            
             justify-content: center;
@@ -1486,6 +1729,10 @@
     &__wrapper{
         display: flex;
         justify-content: flex-end;
+
+        @include media-tablet{
+            justify-content: center;
+        }
 
         @include media-mobile{
             justify-content: center;
@@ -1503,12 +1750,20 @@
     &__copyright{
         margin-bottom: 20px;
 
+        @include media-tablet{
+            display: none;
+        }
+
         @include media-mobile{
             display: none;
         }
     }
     &__copyright-2{
         margin-bottom: 20px;
+
+        @include media-tablet{
+            display: none;
+        }
 
         @include media-mobile{
             display: none;
@@ -1517,6 +1772,11 @@
 }
 
 .footer-logo{
+
+    @include media-tablet{
+        order: 2; 
+        margin-top: 15px;
+    }
      
     @include media-mobile{
         order: 2; 
