@@ -660,10 +660,7 @@
         margin-top: 50px;
     }
 
-    &__buttle{
-        display: flex;
-        justify-content: center;
-
+    &-video{
         @include media-tablet{
             display: none;
         }
