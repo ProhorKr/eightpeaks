@@ -256,6 +256,7 @@
 
     &__img{
         max-height: 100%;
+        max-width: 100%;
 
         @include media-tablet{
             position: absolute;
@@ -277,12 +278,6 @@
         text-align: center;
         margin-left: auto;
         margin-right: auto;
-    }
-    &__video{
-        // margin-right: auto;
-        // margin-left: auto;
-        // // width: 1170px;
-        // display: block;
     }
 
     &__video-mobile{
@@ -603,11 +598,11 @@
 
 .text-block{
     &__item{
-        margin-bottom: 100px;
-        height: 325px;
+        // margin-bottom: 100px;
+        // height: 325px;
 
         @include media-desktop{
-            min-height: 450px;
+            // min-height: 450px;
         }
 
         @include media-tablet{
@@ -648,8 +643,8 @@
     }
     &__text{
         text-align: justify;
-        font-size: 16px;
-        line-height: 26px;
+        font-size: 14px;
+        line-height: 24px;
 
         @include media-mobile{
             font-size: 12px;
@@ -658,7 +653,7 @@
     }
 }
 
-.paralax-buttle{
+.watterfall{
     margin-top: 100px;
 
     @include media-mobile{
@@ -676,6 +671,12 @@
         @include media-mobile{
             display: none;
         }
+    }
+
+    &__text-blocks{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     .section-title{
