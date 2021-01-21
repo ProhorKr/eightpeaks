@@ -160,6 +160,11 @@
     width: 100%;
     background-size: cover;
     overflow: hidden;
+
+    @include media-mobile{
+        height: auto;
+    }
+
     .container{
         height: 100%;
 
@@ -683,20 +688,6 @@
     
 }
 
-.parallax {
-    height: 1192px;
-    width: 360px;
-    overflow: hidden;
-    // background-image: url('../images/dest/parralax-back.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    position: absolute;
-    &__img{
-        height: 1192px;
-    }
-}
 .video-bg{
     position: relative;
     top: 0;
@@ -939,11 +930,23 @@
         justify-content: center;
         align-items: center;
         cursor: pointer;
+        flex-wrap: wrap;
+
         &:hover,&--active{
             box-shadow: 3px 4px 21px rgba(32, 32, 31, 0.11);
             width: 110%;
-            z-index: 2;            
+            z-index: 2;
+            
+            .catalog-carousel__item-title{
+                color: #555;
+                font-weight: bold;
+            }
         }
+    }
+
+    &__item-title{
+        font-size: 14px;
+        color: $textColorLight;
     }
 }
 
