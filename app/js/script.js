@@ -73,21 +73,23 @@ window.onload = function(){
         });
     });
 
+    //Video
+
     if(window.innerWidth <= 992){
-        document.getElementById('video__mobile-wrapper').innerHTML = '\
-        <video class="sct-2__video-mobile col-12" autoplay loop muted preload="auto">\
-            <source src="images/dest/cikle6.mp4" type="video/mp4">\
-            <source src="images/dest/cikle6.webm" type="video/webm">\
-        </video>'
-    }
+        document.getElementById('video__mobile-wrapper').insertAdjacentHTML('afterbegin', '\
+            <video class="sct-2__video-mobile col-12" autoplay loop muted preload="auto">\
+                <source src="images/dest/cikle6.mp4" type="video/mp4">\
+                <source src="images/dest/cikle6.webm" type="video/webm">\
+            </video>'
+        )}
 
     if(window.innerWidth >= 992){
-        document.getElementById('video__desktop-bg').innerHTML = '\
+        document.getElementById('video__desktop-bg').insertAdjacentHTML('afterbegin', '\
             <video class="sct-2__video" autoplay loop muted preload="auto">\
                 <source src="images/dest/Video_E_P_4.mp4" type="video/mp4">\
                 <source src="images/dest/Video_E_P_4.webm" type="video/webm">\
-                </video>'
-    }
+            </video>'
+        )}
 
     $('#btn_submit').on("click", function(){
         // собираем данные с формы

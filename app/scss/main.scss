@@ -695,11 +695,36 @@
     overflow: hidden;
     height: 800px;
     & video{
-        // position: absolute;
-        // left: -65px;
+        max-width: 100%;
     }
     & video:nth-of-type(2){
         top: 660px;
+    }
+
+    &__img{
+        position: absolute;
+        bottom: 10px;
+        right: 15px;
+    }
+}
+
+.video__mobile-wrapper{
+    position: relative;
+
+    &__img{
+        position: absolute;
+        bottom: 53px;
+        right: 30px;
+        width: 315px;
+        height: 177px;
+
+        img{
+            position: absolute;
+            bottom: 0;
+            right: 10px;
+            height: 165px;
+            right: 15px;
+        }
     }
 }
 
@@ -1623,6 +1648,11 @@
         margin-right: auto;
         font-family: $tinos;
     }
+}
+
+.term__link:hover{
+    color: #007bff;
+    text-decoration: underline;
 }
 
 //--footer-------
