@@ -86,8 +86,8 @@ window.onload = function(){
     if(window.innerWidth >= 992){
         document.getElementById('video__desktop-bg').insertAdjacentHTML('afterbegin', '\
             <video class="sct-2__video" autoplay loop muted preload="auto">\
-                <source src="images/dest/Video_E_P_4.mp4" type="video/mp4">\
-                <source src="images/dest/Video_E_P_4.webm" type="video/webm">\
+                <source src="images/dest/Video_E_P_6.mp4" type="video/mp4">\
+                <source src="images/dest/Video_E_P_6.webm" type="video/webm">\
             </video>'
         )}
 
