@@ -694,7 +694,7 @@
     top: 0;
     width: 100%;
     overflow: hidden;
-    height: 500px;
+    height: 550px;
     & video{
         max-width: 100%;
     }
@@ -704,7 +704,7 @@
 
     &__img{
         position: absolute;
-        bottom: 10px;
+        bottom: 0px;
         right: 15px;
     }
 }
@@ -1032,6 +1032,8 @@
 
         @include media-mobile{
             margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
         }
 
         &--r{
