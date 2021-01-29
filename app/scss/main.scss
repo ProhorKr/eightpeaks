@@ -959,8 +959,8 @@
         flex-wrap: wrap;
 
         &:hover,&--active{
-            box-shadow: 3px 4px 21px rgba(32, 32, 31, 0.11);
-            width: 110%;
+            // box-shadow: 3px 4px 21px rgba(32, 32, 31, 0.11);
+            // width: 110%;
             z-index: 2;
             
             .catalog-carousel__item-title{
@@ -1318,13 +1318,13 @@
         }
         &--l{
             left: 50%;
-        transform: translateX(-50%);
+            transform: translateX(-50%);
         }
         &--start,&--end{
             height: 14px;
-            position: static;
-            margin-left: auto;
-            margin-right: auto;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
         }
     }
     &__img{
