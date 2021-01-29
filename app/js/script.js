@@ -127,30 +127,30 @@ window.onload = function(){
     });
 
 
-    // Vertical line browser correct
-    function browser(){
-        var ua = navigator.userAgent;
+    // // Vertical line browser correct
+    // function browser(){
+    //     var ua = navigator.userAgent;
         
-        if (ua.search(/MSIE/) > 0) return 'Internet Explorer';
-        if (ua.search(/Firefox/) > 0) return 'Firefox';
-        if (ua.search(/Opera/) > 0) return 'Opera';
-        if (ua.search(/Chrome/) > 0) return 'Chrome';
-        if (ua.search(/Safari/) > 0) return 'Safari';
-        if (ua.search(/Konqueror/) > 0) return 'Konqueror';
-        if (ua.search(/Iceweasel/) > 0) return 'Debian Iceweasel';
-        if (ua.search(/SeaMonkey/) > 0) return 'SeaMonkey';
+    //     if (ua.search(/MSIE/) > 0) return 'Internet Explorer';
+    //     if (ua.search(/Firefox/) > 0) return 'Firefox';
+    //     if (ua.search(/Opera/) > 0) return 'Opera';
+    //     if (ua.search(/Chrome/) > 0) return 'Chrome';
+    //     if (ua.search(/Safari/) > 0) return 'Safari';
+    //     if (ua.search(/Konqueror/) > 0) return 'Konqueror';
+    //     if (ua.search(/Iceweasel/) > 0) return 'Debian Iceweasel';
+    //     if (ua.search(/SeaMonkey/) > 0) return 'SeaMonkey';
                 
-        if (ua.search(/Gecko/) > 0) return 'Gecko';
+    //     if (ua.search(/Gecko/) > 0) return 'Gecko';
         
-        return 'Search Bot';
-    }
+    //     return 'Search Bot';
+    // }
     
-    if (browser() == 'Safari'){
-        let lineRight = document.querySelectorAll(".reward__vertical-line--l");
-        lineRight.forEach( item => {
-            item.style.right = "79px"
-        })
-    }
+    // if (browser() !== 'Chrome'){
+    //     let lineRight = document.querySelectorAll(".reward__vertical-line--l");
+    //     lineRight.forEach( item => {
+    //         item.style.right = "79px"
+    //     })
+    // }
     
 
 };

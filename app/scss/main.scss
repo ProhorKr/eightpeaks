@@ -1264,6 +1264,7 @@
     }
     &__row{
         height: 300px;
+        position: relative;
     }
     &__col-text{
         display: flex;
@@ -1316,7 +1317,8 @@
             left: 79px;
         }
         &--l{
-            right: 78px;
+            left: 50%;
+        transform: translateX(-50%);
         }
         &--start,&--end{
             height: 14px;
